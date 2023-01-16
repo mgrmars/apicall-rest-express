@@ -1,4 +1,8 @@
-/* style reset */
+/*
+TODO: Refactor; add variables.
+*/
+
+/* Style reset */
 *,
 *::before,
 *::after {
@@ -30,15 +34,8 @@ h1 {
   margin-bottom: 1rem;
 }
 
-h5 {
-  color: hsl(0, 0%, 100%);
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-}
-
 p {
-    color: hsla(0, 0%, 90%, 95%);
+  color: hsla(0, 0%, 90%, 95%);
 
   font-size: 1.1rem;
   font-weight: 400;
@@ -59,7 +56,7 @@ ul {
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: .6rem;
+  border-radius: 0.6rem;
   background-color: hsl(345, 62%, 49%);
   color: hsla(0, 0%, 100%, 95%);
   font-family: inherit;
@@ -74,6 +71,7 @@ ul {
 }
 
 .card .card-title {
+  color: hsla(0, 0%, 100%, 98%);
   font-size: 1.5rem;
   font-weight: 600;
   margin-block-end: 1rem;
@@ -89,15 +87,55 @@ ul {
   margin-bottom: 0;
 }
 
-
+/* Mobile M */
 @media only screen and (max-width: 550px) {
   ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Mobile S */
 @media only screen and (max-width: 370px) {
   ul {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Monitor S */
+@media only screen and (min-width: 1000px) {
+  main {
+    max-width: 120ch;
+  }
+
+  ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Monitor L */
+@media only screen and (min-width: 1700px) {
+  main {
+    max-width: 200ch;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  .fetch-button {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }
+
+  .card .card-title {
+    font-size: 2rem;
+  }
+
+  ul {
+    grid-template-columns: repeat(6, 1fr);
   }
 }

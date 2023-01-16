@@ -9,7 +9,11 @@ const apiCall = async () => {
     .then((data) => {
       text.innerHTML = '';
       data.forEach((element) => {
-        text.innerHTML += cardComponent(element.id, element.name, element.salary);
+        text.innerHTML += cardComponent(
+          element.id,
+          element.name,
+          element.salary
+        );
       });
     });
 };
@@ -36,5 +40,4 @@ const fetchAndLoad = () => {
 };
 
 fetchButton.addEventListener('click', fetchAndLoad);
-
-fetchAndLoad();
+window.onload(fetchAndLoad);
