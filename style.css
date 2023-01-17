@@ -62,6 +62,15 @@ ul {
   font-family: inherit;
 }
 
+.fetch-button:hover {
+  background-color: hsl(345, 63%, 39%);
+}
+
+.fetch-button:active {
+  background-color: hsl(345, 87%, 58%);
+
+}
+
 .card {
   max-width: fit-content;
   border-radius: 1rem;
